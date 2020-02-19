@@ -1,0 +1,9 @@
+version: '3'
+services:
+    gcc-clang:
+        image: 'gcc:9.2'
+        volumes:
+            - ./clang:/src/clang
+        working_dir: /src/clang
+        command: ./build.sh
+        container_name: gcc-clang_container
